@@ -1,4 +1,5 @@
-# Exercise 1: What is the value output in the given console.log() statements? Read them and guess before running the code. For each answer, explain (keep it short) why the output came out that way.
+# Exercise 1:
+# What is the value output in the given console.log() statements? Read them and guess before running the code. For each answer, explain (keep it short) why the output came out that way.
 
 # 1.
 var lastWord = 'welcome';
@@ -76,6 +77,36 @@ Struck it rich!
 # Result:
 Looking for gold
 
-  Seems to have occurred because of variable scope.
-  i.e., the  'contents' variable inside the getMail function is a different 'contents' from the one outside the function.
-  Therefore, the outer 'contents' variable remains unchanged by getMail.
+    Seems to have occurred because of variable scope.
+    i.e., the  'contents' variable inside the getMail function is a different 'contents' from the one outside the function.
+    Therefore, the outer 'contents' variable remains unchanged by getMail.
+
+# 7.
+var decision;
+function firstIdea() {
+  var decision = 'Buy a new car';
+  return decision;
+}
+function secondIdea() {
+  console.log(decision);
+}
+firstIdea();
+secondIdea();
+# Guess:
+Buy a new car
+undefined
+# Result:
+I was right!
+
+# Exercise 2:
+# For each problem below, READ the code and try to figure out what will happen. Then run the code to see if you're right. Lastly, perform the follow-up rewrite provided after each problem.
+
+# Problem 1:
+# Can we access the address variable outside of the buildHouse method?
+function buildHouse(address) {
+  // ... house gets built
+  return 'Building house at ' + address;
+}
+buildHouse('123 Happy St.');
+console.log(address);
+# Modify the above example so it prints out the address (just the address) instead of erroring. You shouldn't have to modify the function.
