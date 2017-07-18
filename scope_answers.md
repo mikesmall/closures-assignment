@@ -102,7 +102,6 @@ I was right!
 # For each problem below, READ the code and try to figure out what will happen. Then run the code to see if you're right. Lastly, perform the follow-up rewrite provided after each problem.
 
 # Problem 1:
-# Can we access the address variable outside of the buildHouse method?
 function buildHouse(address) {
   // ... house gets built
   return 'Building house at ' + address;
@@ -110,3 +109,58 @@ function buildHouse(address) {
 buildHouse('123 Happy St.');
 console.log(address);
 # Modify the above example so it prints out the address (just the address) instead of erroring. You shouldn't have to modify the function.
+  function buildHouse(address) {
+    return 'Building house at ' + address;
+  }
+  address = buildHouse('123 Happy St.');
+  console.log(address);
+
+# Problem 2:
+var determined = false;
+if (determined) {
+  var smoothie = 'strawberry banana';
+}
+console.log(smoothie);
+# Modify the above example so that smoothie exists whether determined is true or false.
+  var determined = false;
+  if (determined) {
+    var smoothie = 'strawberry banana';
+  } else {
+    var smoothie = 'nuts and gum';
+  }
+  console.log(smoothie);
+
+# Problem 3:
+for (var index = 0; index < 5; index++) {
+  // ...
+}
+console.log(index);
+# Modify the above example so that the variable index is NOT available when we use console.log. Remember, scope in JavaScript is functional.
+  function hideIndex () {
+    for (var index = 0; index < 5; index++) {
+      // ...
+    }
+  };
+  console.log(index);
+
+# Problem 4:
+var items = ['glasses', 'toothpaste', 'wallet'];
+items.forEach(function(item) {
+  var lastItem = item;
+});
+console.log(lastItem);
+# Modify the above example so that lastItem is available when we run console.log(lastItem).
+var items = ['glasses', 'toothpaste', 'wallet'];
+var lastItem = function() {
+  items.forEach(function(item) {
+    var lastItem = item;
+  });
+}
+console.log(lastItem);
+
+    Output was:
+    [Function: lastItem]
+
+    I don't know if that's what this exercise is asking me for...
+
+# 
