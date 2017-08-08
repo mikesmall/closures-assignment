@@ -158,9 +158,7 @@ var lastItem = function() {
 }
 console.log(lastItem);
 
-    Output was:
+    Output:
     [Function: lastItem]
 
-    I don't know if that's what this exercise is asking me for...
-
-# 
+    (I don't know if that's exactly what this exercise is asking for)

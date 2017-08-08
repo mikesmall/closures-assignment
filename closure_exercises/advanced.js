@@ -9,7 +9,11 @@ clickCounter.addEventListener('click', getClickCountHandler());
 
 // Problem 1: fill in this function
 function getClickCountHandler() {
-
+  var theCount = 0;
+  return function() {
+    theCount++;
+    alert("You have now clicked that same button " + theCount + " times!!!");
+  }
 }
 
 
