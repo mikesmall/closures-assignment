@@ -1,13 +1,18 @@
-
 // Generate a function that requires arguments.
 // Notice that the examples at the end are also passing arguments!
 // How many parameters do the outer and inner functions each need?
 
 var recipient = "Devon";
-var sendNote = getSendNoteFunction(recipient);
-// YOUR CODE HERE ------------------------
 
+function sendNote(theNote) {
+  getSendNoteFunction();
+  console.log(theNote);
+}
 
+function getSendNoteFunction() {
+  var recipient = "Devon";
+  console.log("Dear " + recipient + ",");
+};
 
 
 // ---------------------------------------
