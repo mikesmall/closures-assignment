@@ -16,8 +16,6 @@ function getClickCountHandler() {
   }
 }
 
-
-
 document.addEventListener('keydown', getSecretKeyCodeEventHandler());
 
 // Goal: we want to generate a secret code by pressing buttons. When we are ready, we press Enter to see the code on the screen.
@@ -31,6 +29,8 @@ document.addEventListener('keydown', getSecretKeyCodeEventHandler());
 // Also note that the keycode for Enter is 13
 
 function getSecretKeyCodeEventHandler() {
-  // FILL THIS IN
-
+  return function (event) {
+    var secretCode = event.keyCode;
+    console.log(secretCode);
+  }
 }
